@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เครื่องคำนวณเกรด</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        #result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>เครื่องคำนวณเกรด</h1>
+    <form id="gradeForm">
+        <label for="score">คะแนน (0-100):</label>
+        <input type="number" id="score" min="0" max="100" required>
+       
+        <button type="submit">คำนวณเกรด</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        alert("ใส่คะแนนของคุณ")
+        document.getElementById('gradeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+           
+            const score = parseInt(document.getElementById('score').value);
+            const resultDiv = document.getElementById('result');
+            let grade;
+           
+          if (score >=80) {
+            grade = 'A' ;
+          }else if (score >=70) {
+          grade = 'B' ;
+          }else if (score >=60) { 
+            grade = 'C' ;
+          } else if (score >=50) {
+            grade = 'D 
+          }else if (score <50) {
+            grade 'F' ;
+          }
+                
+          
+s
+            
+          
+          
+            
+          
+         
+          
+           
+            resultDiv.innerHTML = `คะแนนของคุณคือ: ${score}<br>เกรดของคุณคือ: ${grade}`;
+        });
+    </script>
+</body>
+</html>
+
